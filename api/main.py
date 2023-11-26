@@ -1,10 +1,11 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
-from api.utils.db import database
-from api.auth import router as auth_router
-from api.users import router as user_router
-from api.exceptions.exception import BaseException
 
+from api.activities import router as activities_router
+from api.auth import router as auth_router
+from api.exceptions.exception import BaseException
+from api.strava import router as strava_router
+from api.utils.database import database
 
 app = FastAPI(
     docs_url="/api/v1/docs",
@@ -32,4 +33,5 @@ async def unicorn_exception_handler(request: Request, e: BaseException):
 
 
 app.include_router(auth_router.router, tags=["Auth"])
-app.include_router(user_router.router, tags=["Users"])
+app.include_router(strava_router.router, tags=["Strava"])
+app.include_router(activities_router.router, tags=["Activities"])

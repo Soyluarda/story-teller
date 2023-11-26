@@ -8,4 +8,3 @@ class Setting(BaseSettings):
     DB_DATABASE: str = "postgres"
     DB_USERNAME: str = "postgres"
     DB_PASSWORD: str = "postgres"
-

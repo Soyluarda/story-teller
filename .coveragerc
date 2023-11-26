@@ -1,0 +1,7 @@
+[run]
+source = ./api/, ./api/auth/, ./api/users/, ./api/utils/
+omit = ./venv/*,*/tests/*,*tests*,*__init__.py,
+
+[report]
+skip_empty = true
+omit = ./venv/*,*/tests/*,*tests*

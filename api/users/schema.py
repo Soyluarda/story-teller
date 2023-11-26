@@ -1,6 +1,7 @@
-from pydantic import BaseModel, Field
-from typing import Optional
 from datetime import datetime
+from typing import Optional
+
+from pydantic import BaseModel
 
 
 class UserList(BaseModel):
@@ -9,9 +10,6 @@ class UserList(BaseModel):
     username: str
     created_on: Optional[datetime] = None
     status: str = None
-
-class SocialUser(UserList):
-    social_auth: str
 
 
 class UserCreate(UserList):
