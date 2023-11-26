@@ -1,0 +1,15 @@
+fastapi
+pydantic==1.4
+uvicorn
+databases
+SQLAlchemy
+asyncpg
+psycopg2-binary
+starlette
+passlib
+bcrypt
+python-multipart
+PyJWT
+requests
+stravalib
+langchain
